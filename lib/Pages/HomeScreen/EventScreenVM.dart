@@ -1,7 +1,7 @@
 import 'package:music/BO/EventBo.dart';
 import 'package:music/Helpers/NavigationHelper/Mixin/NavigationMixin.dart';
 import 'package:music/Helpers/NavigationHelper/Routes.dart';
-import 'package:music/Pages/EventScreen/EventScreenModel.dart';
+import 'package:music/Pages/HomeScreen/EventScreenModel.dart';
 
 // Create a class named HomeScreenVM which extends the class HomeScreenModel
 

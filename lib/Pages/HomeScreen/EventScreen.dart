@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:music/Helpers/NavigationHelper/Mixin/NavigationMixin.dart';
 import 'package:music/Helpers/NavigationHelper/NavigationHelper.dart';
-import 'package:music/pages/EventScreen/EventScreenVM.dart';
+import 'package:music/pages/HomeScreen/EventScreenVM.dart';
 
 // Create a stful wiget for evntscrn
 class EventScreen extends StatefulWidget {
