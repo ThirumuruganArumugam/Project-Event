@@ -76,7 +76,6 @@ class _EventDetailScreenState extends State<EventDetailScreen> {
             style: TextStyle(
                 color: Colors.black, fontWeight: FontWeight.w400, fontSize: 24),
           ),
-          // ignore: prefer_const_literals_to_create_immutables
           actions: [
             IconButton(
                 onPressed: () {},
