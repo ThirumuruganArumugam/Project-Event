@@ -15,6 +15,7 @@ class EventScreen extends StatefulWidget {
 }
 
 class _EventScreenState extends State<EventScreen> {
+  
   // Create an instance for the EventScreenVM
   final EventScreenVM _eventScreenVM = EventScreenVM();
 
@@ -22,8 +23,10 @@ class _EventScreenState extends State<EventScreen> {
   @override
   void initState() {
     super.initState();
+    
     // Using navigation stream to listen to the event
     _eventScreenVM.navigationStream.stream.listen((event) {
+      
       // Check whether the condition event is equal to Navigatorpop
       if (event is NavigatorPush) {
         // Using context.pop() pass the pageConfig as paramter
@@ -196,33 +199,47 @@ class _EventScreenState extends State<EventScreen> {
                           left: 10, top: 10, bottom: 10, right: 10),
                       shadowColor: const Color(0xff2e2e4f),
                       backgroundColor:
+                          
                           // Check whether the instance value is equal to the string value
                           _eventScreenVM.chips[index] == "Sports"
+                              
                               // Assign color for it
                               ? const Color(0xfff0635a)
+                              
                               // Check whether the instance value is equal to the string value
                               : _eventScreenVM.chips[index] == "Music"
+                                  
                                   // Assign color for it
                                   ? const Color(0xfff59762)
+                                  
                                   // Check whether the instance value is equal to the string value
                                   : _eventScreenVM.chips[index] == "Food"
+                                     
                                       // Assign color for it
                                       ? const Color(0xff29D697)
+                                      
                                       // Assign color for it
                                       : const Color(0xff46CDFB),
                       avatar: Image.asset(
+                        
                         // Check whether the instance value is equal to the string value
                         _eventScreenVM.chips[index] == "Sports"
+                            
                             // If the condition is satisfied give the image path
                             ? "lib/Helpers/Resources/Assets/Images/ball.png"
+                            
                             // Check whether the instance value is equal to the string value
                             : _eventScreenVM.chips[index] == "Music"
+                                
                                 // If the condition is satisfied give the image path
                                 ? "lib/Helpers/Resources/Assets/Images/music.png"
+                                
                                 // Check whether the instance value is equal to the string value
                                 : _eventScreenVM.chips[index] == "Food"
+                                    
                                     // If the condition is satisfied give the image path
                                     ? "lib/Helpers/Resources/Assets/Images/food.png"
+                                    
                                     // If the condition is satisfied give the image path
                                     : "lib/Helpers/Resources/Assets/Images/paint.png",
                       ),
@@ -297,6 +314,7 @@ class _EventScreenState extends State<EventScreen> {
                         borderRadius: BorderRadius.circular(20)),
                     child: InkWell(
                       onTap: () {
+                        
                         // Navigate the instance value
                         _eventScreenVM.navigateToNextPage(index: index);
                       },
@@ -336,6 +354,7 @@ class _EventScreenState extends State<EventScreen> {
                                   child: Column(
                                     children: [
                                       Text(
+                                        
                                         // Declare the date using the instance
                                         _eventScreenVM
                                             .collectionOfBo[index].date,
@@ -346,6 +365,7 @@ class _EventScreenState extends State<EventScreen> {
                                         ),
                                       ),
                                       Text(
+                                        
                                         // Declare the month using the instance
                                         _eventScreenVM
                                             .collectionOfBo[index].month,
@@ -368,15 +388,18 @@ class _EventScreenState extends State<EventScreen> {
                                       color: Colors.white,
                                       borderRadius: BorderRadius.circular(7)),
                                   child: Column(children: [
+                                    
                                     // Check whether the instance is equal to the true value
                                     _eventScreenVM.collectionOfBo[index]
                                                 .bookmark ==
                                             true
+                                        
                                         // If the condition is satisfied
                                         ? const Icon(
                                             Icons.bookmark,
                                             color: Color(0xffEB5757),
                                           )
+                                        
                                         // if the condition is not satisfied
                                         : const Icon(
                                             Icons.bookmark_border_outlined,
@@ -393,6 +416,7 @@ class _EventScreenState extends State<EventScreen> {
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 20),
                               child: Text(
+                                
                                 // Declare the title using the instance
                                 _eventScreenVM.collectionOfBo[index].title,
                                 style: const TextStyle(
@@ -446,6 +470,7 @@ class _EventScreenState extends State<EventScreen> {
                                     width: 5,
                                   ),
                                   Text(
+                                    
                                     // Declare the address for the instance
                                     _eventScreenVM
                                         .collectionOfBo[index].address,
@@ -493,7 +518,6 @@ class _EventScreenState extends State<EventScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      // ignore: prefer_const_literals_to_create_immutables
                       children: [
                         const Text(
                           "Invite your friends",
@@ -556,7 +580,7 @@ class _EventScreenState extends State<EventScreen> {
   /* Invoke the dispose() */
   @override
   void dispose() {
-    //
+    // Using dispose method, dispose the instance _eventScreenVM
     _eventScreenVM.dispose();
     super.dispose();
   }

@@ -13,18 +13,25 @@ class Bo {
   String title;
   // Initialize a string named personone
   String personOne ;
-  // Initialize a string named personone
+
+  // Initialize a string named persontwo
   String personTwo;
+  
   // Initialize a string named address
   String address ;
+  
   // Initialize a string named image
   String image ;
+  
   // Initialize a string named location
   String location ;
+  
   // Initialize a string named organizer
   String organizer ;
+  
   // Initialize a string named month
   String month ;
+  
   // Initialize a string named aboutEvent
   String aboutEvent;
  

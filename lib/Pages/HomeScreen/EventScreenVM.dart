@@ -18,6 +18,7 @@ class EventScreenVM extends EventScreenModel {
 
   /* Create a Constructor */
   EventScreenVM() {
+    
     /* declare the set method */
     setcollectionOfBo(collectionOfBo: [
       Bo(

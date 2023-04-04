@@ -82,11 +82,13 @@ class _EventDetailScreenState extends State<EventDetailScreen> {
                 icon:
                     // Check whether the instance is equal to the true value
                     _eventDetailScreenVM.instance.bookmark == true
+                        
                         // If the condition is satisfied
                         ? const Icon(
                             Icons.bookmark,
                             color: Colors.black,
                           )
+                        
                         // If the condition is not satisfied
                         : const Icon(
                             Icons.bookmark_border_outlined,
@@ -118,6 +120,7 @@ class _EventDetailScreenState extends State<EventDetailScreen> {
                     height: 100,
                     width: 350,
                     child: Text(
+                      
                       // Declare the title using the instance
                       _eventDetailScreenVM.instance.title,
                       style: const TextStyle(
@@ -219,6 +222,7 @@ class _EventDetailScreenState extends State<EventDetailScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
+                              
                               // Declare the location using the instance
                               _eventDetailScreenVM.instance.location,
                               style: const TextStyle(
@@ -264,6 +268,7 @@ class _EventDetailScreenState extends State<EventDetailScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
+                              
                               // Declare the organizer using the instance
                               _eventDetailScreenVM.instance.organizer,
                               style: const TextStyle(
@@ -333,6 +338,7 @@ class _EventDetailScreenState extends State<EventDetailScreen> {
                             height: 10,
                           ),
                           Text(
+                             
                               // Declare the aboutEvent using the instance
                               _eventDetailScreenVM.instance.aboutEvent,
                               style: const TextStyle(
@@ -353,7 +359,8 @@ class _EventDetailScreenState extends State<EventDetailScreen> {
   /* invoke the dispose function */
   @override
   void dispose() {
-    // Using dispose method, dispose the instance
+    
+    // Using dispose method, dispose the instance _eventDetailScreenVM
     _eventDetailScreenVM.dispose();
     super.dispose();
   }
