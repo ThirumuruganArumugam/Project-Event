@@ -13,5 +13,5 @@ class EventDetailScreenModel = _EventDetailScreenModelBase
 abstract class _EventDetailScreenModelBase with Store {
 
   // Create an instance for the class Bo
-  late Bo instance ;
+  late Bo instance;
 }
