@@ -5,7 +5,7 @@ import 'package:music/Pages/HomeScreen/HomeScreenModel.dart';
 
 // Create a class named HomeScreenVM which extends the class HomeScreenModel
 
-class EventScreenVM extends HomeScreenModel {
+class HomeScreenVM extends HomeScreenModel {
 
   /* Declare a Constructor navigatetonextpage with required parameter index */
   void navigateToNextPage({required int index}) {
@@ -17,7 +17,7 @@ class EventScreenVM extends HomeScreenModel {
   }
 
   /* Create a Constructor */
-  EventScreenVM() {
+  HomeScreenVM() {
     
     /* declare the set method */
     setcollectionOfBo(collectionOfBo: [

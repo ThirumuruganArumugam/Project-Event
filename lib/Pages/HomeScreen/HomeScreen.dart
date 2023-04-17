@@ -2,22 +2,22 @@
 import 'package:flutter/material.dart';
 import 'package:music/Helpers/NavigationHelper/Mixin/NavigationMixin.dart';
 import 'package:music/Helpers/NavigationHelper/NavigationHelper.dart';
-import 'package:music/pages/HomeScreen/HomeScreenVM.dart';
+import 'HomeScreenVM.dart';
 
 // Create a stful wiget for evntscrn
-class EventScreen extends StatefulWidget {
-  const EventScreen({
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({
     super.key,
   });
 
   @override
-  State<EventScreen> createState() => _EventScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _EventScreenState extends State<EventScreen> {
+class _HomeScreenState extends State<HomeScreen> {
   
   // Create an instance for the EventScreenVM
-  final EventScreenVM _eventScreenVM = EventScreenVM();
+  final HomeScreenVM _homeScreenVM = HomeScreenVM();
 
   /*Invoke the initState() */
   @override
@@ -25,7 +25,7 @@ class _EventScreenState extends State<EventScreen> {
     super.initState();
     
     // Using navigation stream to listen to the event
-    _eventScreenVM.navigationStream.stream.listen((event) {
+    _homeScreenVM.navigationStream.stream.listen((event) {
       
       // Check whether the condition event is equal to Navigatorpop
       if (event is NavigatorPush) {
@@ -192,7 +192,7 @@ class _EventScreenState extends State<EventScreen> {
                   },
                   scrollDirection: Axis.horizontal,
                   // Declare the length using instance
-                  itemCount: _eventScreenVM.chips.length,
+                  itemCount: _homeScreenVM.chips.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Chip(
                       padding: const EdgeInsets.only(
@@ -201,19 +201,19 @@ class _EventScreenState extends State<EventScreen> {
                       backgroundColor:
                           
                           // Check whether the instance value is equal to the string value
-                          _eventScreenVM.chips[index] == "Sports"
+                          _homeScreenVM.chips[index] == "Sports"
                               
                               // Assign color for it
                               ? const Color(0xfff0635a)
                               
                               // Check whether the instance value is equal to the string value
-                              : _eventScreenVM.chips[index] == "Music"
+                              : _homeScreenVM.chips[index] == "Music"
                                   
                                   // Assign color for it
                                   ? const Color(0xfff59762)
                                   
                                   // Check whether the instance value is equal to the string value
-                                  : _eventScreenVM.chips[index] == "Food"
+                                  : _homeScreenVM.chips[index] == "Food"
                                      
                                       // Assign color for it
                                       ? const Color(0xff29D697)
@@ -223,19 +223,19 @@ class _EventScreenState extends State<EventScreen> {
                       avatar: Image.asset(
                         
                         // Check whether the instance value is equal to the string value
-                        _eventScreenVM.chips[index] == "Sports"
+                        _homeScreenVM.chips[index] == "Sports"
                             
                             // If the condition is satisfied give the image path
                             ? "lib/Helpers/Resources/Assets/Images/ball.png"
                             
                             // Check whether the instance value is equal to the string value
-                            : _eventScreenVM.chips[index] == "Music"
+                            : _homeScreenVM.chips[index] == "Music"
                                 
                                 // If the condition is satisfied give the image path
                                 ? "lib/Helpers/Resources/Assets/Images/music.png"
                                 
                                 // Check whether the instance value is equal to the string value
-                                : _eventScreenVM.chips[index] == "Food"
+                                : _homeScreenVM.chips[index] == "Food"
                                     
                                     // If the condition is satisfied give the image path
                                     ? "lib/Helpers/Resources/Assets/Images/food.png"
@@ -245,7 +245,7 @@ class _EventScreenState extends State<EventScreen> {
                       ),
                       label: Text(
                         // Declare the index value for the instance
-                        _eventScreenVM.chips[index],
+                        _homeScreenVM.chips[index],
                         style: const TextStyle(
                             fontSize: 17.5, color: Colors.white),
                       ),
@@ -305,7 +305,7 @@ class _EventScreenState extends State<EventScreen> {
               child: ListView.separated(
                 
                 // Declare the length using instance
-                itemCount: _eventScreenVM.collectionOfBo.length,
+                itemCount: _homeScreenVM.collectionOfBo.length,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (BuildContext context, int index) {
                   return Card(
@@ -316,7 +316,7 @@ class _EventScreenState extends State<EventScreen> {
                       onTap: () {
                         
                         // Navigate the instance value
-                        _eventScreenVM.navigateToNextPage(index: index);
+                        _homeScreenVM.navigateToNextPage(index: index);
                       },
                       child: Container(
                         height: 300,
@@ -336,7 +336,7 @@ class _EventScreenState extends State<EventScreen> {
                                       image: DecorationImage(
                                         image: AssetImage(
                                             // Insert the image value usig the instance
-                                            _eventScreenVM
+                                            _homeScreenVM
                                                 .collectionOfBo[index].image),
                                         fit: BoxFit.cover,
                                       )),
@@ -356,7 +356,7 @@ class _EventScreenState extends State<EventScreen> {
                                       Text(
                                         
                                         // Declare the date using the instance
-                                        _eventScreenVM
+                                        _homeScreenVM
                                             .collectionOfBo[index].date,
                                         style: const TextStyle(
                                           color: Color(0xffEB5757),
@@ -367,7 +367,7 @@ class _EventScreenState extends State<EventScreen> {
                                       Text(
                                         
                                         // Declare the month using the instance
-                                        _eventScreenVM
+                                        _homeScreenVM
                                             .collectionOfBo[index].month,
                                         style: const TextStyle(
                                             color: Color(0xffEB5757),
@@ -390,7 +390,7 @@ class _EventScreenState extends State<EventScreen> {
                                   child: Column(children: [
                                     
                                     // Check whether the instance is equal to the true value
-                                    _eventScreenVM.collectionOfBo[index]
+                                    _homeScreenVM.collectionOfBo[index]
                                                 .bookmark ==
                                             true
                                         
@@ -418,7 +418,7 @@ class _EventScreenState extends State<EventScreen> {
                               child: Text(
                                 
                                 // Declare the title using the instance
-                                _eventScreenVM.collectionOfBo[index].title,
+                                _homeScreenVM.collectionOfBo[index].title,
                                 style: const TextStyle(
                                     color: Color(0xff000000),
                                     fontSize: 20,
@@ -472,7 +472,7 @@ class _EventScreenState extends State<EventScreen> {
                                   Text(
                                     
                                     // Declare the address for the instance
-                                    _eventScreenVM
+                                    _homeScreenVM
                                         .collectionOfBo[index].address,
                                     style: const TextStyle(
                                         color: Color(0xff2B2849),
@@ -581,7 +581,7 @@ class _EventScreenState extends State<EventScreen> {
   @override
   void dispose() {
     // Using dispose method, dispose the instance _eventScreenVM
-    _eventScreenVM.dispose();
+    _homeScreenVM.dispose();
     super.dispose();
   }
 }

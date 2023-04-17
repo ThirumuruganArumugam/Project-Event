@@ -17,7 +17,7 @@ abstract class _HomeScreenModelBase with Store {
 
   /* Create a setmethod and initialize the required parameter */
   @action
-  setcollectionOfBo({required List<Bo> collectionOfBo}) {
+  void setcollectionOfBo({required List<Bo> collectionOfBo}) {
     collectionOfBo = [];
     this.collectionOfBo = collectionOfBo;
   }
