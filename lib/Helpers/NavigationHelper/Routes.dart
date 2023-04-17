@@ -1,5 +1,5 @@
 import 'package:music/Pages/EventDetailScreen/EventDetailScreen.dart';
-import 'package:music/Pages/HomeScreen/EventScreen.dart';
+import 'package:music/Pages/HomeScreen/HomeScreen.dart';
 
 import 'NavigationHelper.dart';
 

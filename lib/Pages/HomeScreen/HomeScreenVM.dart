@@ -1,11 +1,11 @@
 import 'package:music/BO/EventBo.dart';
 import 'package:music/Helpers/NavigationHelper/Mixin/NavigationMixin.dart';
 import 'package:music/Helpers/NavigationHelper/Routes.dart';
-import 'package:music/Pages/HomeScreen/EventScreenModel.dart';
+import 'package:music/Pages/HomeScreen/HomeScreenModel.dart';
 
 // Create a class named HomeScreenVM which extends the class HomeScreenModel
 
-class EventScreenVM extends EventScreenModel {
+class EventScreenVM extends HomeScreenModel {
 
   /* Declare a Constructor navigatetonextpage with required parameter index */
   void navigateToNextPage({required int index}) {

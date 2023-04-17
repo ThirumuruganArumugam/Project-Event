@@ -4,13 +4,13 @@ import 'package:music/Helpers/NavigationHelper/Mixin/NavigationMixin.dart';
 import '../../BO/EventBo.dart';
 
 
-part 'EventScreenModel.g.dart';
+part 'HomeScreenModel.g.dart';
 
 // Create a EventDetailScreenModel
-class EventScreenModel = _EventScreenModelBase
-    with _$EventScreenModel, NavigationMixin;
+class HomeScreenModel = _HomeScreenModelBase
+    with _$HomeScreenModel, NavigationMixin;
 
-abstract class _EventScreenModelBase with Store {
+abstract class _HomeScreenModelBase with Store {
   // Declare an observable List named collectioOfBo and assign empty value
   @observable
   List<Bo> collectionOfBo = [];
